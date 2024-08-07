@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定class样式</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <style type="text/css">
+        .basic{
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .nomal{
+            background-color: azure;
+        }
+
+        .class1{
+            background-color: aquamarine;
+        }
+
+        .class2{
+            background-color: bisque;
+        }
+
+        .class3{
+            background-color: #ff7fea;
+        }
+
+
+    </style>
+
+    <div id="root">
+        <div>{{name}}</div><br/><br/>
+        <!--绑定class样式，字符串写法，适用于：样式名不确定，需要动态指定-->
+        <div class="basic" :class="mood">{{name}}</div><br/><br/>
+
+        <!--数组写法，绑定样式不确定，名称也不确定-->
+        <div class="basic" :class="classArr">{{name}}</div><br/><br/>
+
+        <!--对象写法，绑定样式个数确定，名称不确定-->
+        <div class="basic" :class="classObj" >{{name}}</div><br/><br/>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            name:"好好学习，天天向上",
+            mood:"nomal",
+            classArr:['class1','class2','class3'],
+            classObj:{
+                class1:true,
+                class2:true
+            }
+        }
+    });
+
+
+</script>
+</html>

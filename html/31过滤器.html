@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <!--时间处理-->
+    <script type="text/javascript" src="../js/dayjs.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root">
+        <h2>显示格式化后的时间</h2>
+        <h2>{{ftmTime}}</h2>
+        <h2>{{getFormartTime() }}</h2>
+
+        <!--过滤器使用-->
+        <h2>{{time | timeFilter}}</h2>
+
+        <!--过滤器传参-->
+        <h2>{{time | timeFilter('YYYY-MM-DD HH:mm:ss') | mySlice }}</h2>
+
+
+        <h2 :x="msg | mySlice" >你好啊！帅气的男孩</h2>
+        <input type="text" v-model="msg">
+
+    </div>
+</body>
+<script type="text/javascript">
+
+
+    //全局过滤器
+    Vue.filter('mySlice', function (value) {
+        return value.slice(0, 4)
+
+    });
+
+
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+           time:1722848396374,
+            msg:'你好啊！帅气的男孩'
+
+        },
+        computed: {
+            ftmTime(){
+                // return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss');
+                // 获取当前时间
+                return dayjs().format('YYYY-MM-DD HH:mm:ss');
+            }
+
+        },
+        methods:{
+            getFormartTime(){
+                return dayjs().format('YYYY-MM-DD HH:mm:ss');
+            }
+        },
+        filters:{ // 局部过滤器
+            timeFilter(value,format='YYYY-MM-DD'){
+                return dayjs(value).format(format);
+            },
+            // myslice(value){
+            //     return value.slice(0,4);
+            //
+            // }
+        }
+
+
+    });
+
+
+
+</script>
+</html>
