@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定style样式</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+
+    <div id="root">
+        <div>{{name}}</div><br/><br/>
+        <div class="basic" :style="styleObj">{{name}}</div><br/><br/>
+
+        <div class="basic" :style="styleArr">{{name}}</div><br/><br/>
+
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            name:"好好学习，天天向上",
+            mood:"nomal",
+            styleObj:{
+                fontSize:'40px',
+                color:'red'
+            },
+            styleArr:[
+                {fontSize:'40px'},
+                { color:'red'}
+            ]
+        }
+    });
+
+
+</script>
+</html>

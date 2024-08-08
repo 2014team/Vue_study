@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表排序</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <h2>列表人员</h2>
+        <input type="text" placeholder="请输入姓名" v-model="keyWold">
+        <button @click="sortType = 2">年龄升序</button>
+        <button @click="sortType = 1">年龄降序</button>
+        <button @click="sortType = 0">原顺序</button>
+
+
+        <ul>
+            <li v-for="(item, index) in filPersonArr" :key="item.id">
+               {{index}}-- {{ item.name }} -- {{ item.age }}--{{ item.sex }}
+            </li>
+
+        </ul>
+
+
+    </div>
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+    /*watch实现*/
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            keyWold:'',
+            sortType:0, // 0原顺序1降序2升序
+            personArr: [
+                {id: 1, name: '张三', age: 48,sex:'男'},
+                {id: 2, name: '李四', age: 18,sex:'女'},
+                {id: 3, name: '王五', age: 28,sex:'男'},
+                {id: 4, name: '老刘', age: 8,sex:'女'},
+                {id: 5, name: '刘大大', age: 58,sex:'女'},
+            ],
+
+        },
+        computed: {
+            filPersonArr(){
+                const  arr =  this.personArr.filter((p)=>{
+                    return p.name.indexOf(this.keyWold) != -1
+
+                })
+
+                if(this.sortType){
+
+                    arr.sort((p1,p2)=>{
+                        return this.sortType === 1 ?  (p2.age - p1.age) : (p1.age - p2.age)
+                    })
+
+                }
+
+                return arr;
+
+
+
+
+            }
+        }
+
+    });
+
+
+
+
+</script>
+</html>

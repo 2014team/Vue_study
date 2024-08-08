@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+<style type="text/css">
+    .demo{
+        background-color: aquamarine;
+        padding: 20px;
+    }
+
+    .box1{
+        background-color: oldlace;
+        padding: 20px;
+    }
+
+    .box2{
+        background-color: orchid;
+        padding: 20px;
+    }
+
+    .list{
+        background-color: bisque;
+        width: 200px;
+        height: 200px;
+        overflow: auto;
+    }
+
+    li{
+        height: 100px;
+    }
+
+</style>
+
+
+<div id="root">
+
+       <!-- Vue中的事件修饰符:
+        1.prevent:阳止默认事件(常用);
+        2.stop:阳止事件冒泡(常用);
+        3.once:事件只触发一次(常用);
+        4.capture:使用事件的捕获模式:
+        5.self:只有event.target是当前操作的元素是才触发事件:
+        6.passive:事件的默认行为立即执行，无需等待事件回调执行完毕:-->
+
+    <!--prevent-->
+    <a href="http://www.baidu.com" @click.prevent="showInfo" >prevent事件修饰符</a><br/><br/>
+
+    <!--stop-->
+    <div class="demo" @click="showInfo">
+        <button @click.stop="showInfo" >stop事件修饰符</button><br/><br/>
+    </div>
+
+    <!--once-->
+    <button @click.once="showInfo" >once事件修饰符</button><br/><br/>
+
+
+    <!--capture  冒泡由里向外  2 1  -->
+    <div class="box1" @click="showMsg(1)">
+        div1
+        <div class="box2" @click="showMsg(2)"></div>
+        div2
+    </div>
+
+
+    <!--self-->
+    <div class="demo"  @click.self="selfMethod">
+        <button @click="selfMethod" >selfMethod事件修饰符</button><br/><br/>
+    </div>
+
+  <!--  <ul @scroll.passive="scrollMethod" class="list">-->
+    <ul @wheel.passive="scrollMethod" class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+
+    </ul>
+
+
+</div>
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            name:'http://www.zhuzq.com'
+        },
+        methods:{
+            showInfo(event){
+                alert('你好！')
+            },
+            showMsg(value){
+                console.log(value)
+            },
+            selfMethod(e){
+                console.log(e.target)
+            },
+            scrollMethod(){
+                for(let i=0;i<10000; i++){
+                    console.log('@')
+                }
+                console.log('加载完毕')
+            }
+        }
+    });
+
+
+
+</script>
+</html>

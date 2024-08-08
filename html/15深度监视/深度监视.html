@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深度监视</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <h2>今天天气很{{info}}</h2>
+        <button @click="changeWeather">切换天气</button><br/><br/>
+        <button @click="person.age++">让我age++</button><br/><br/>
+        <button @click="person.score++">让我score++</button>
+
+        <h2>age:{{person.age}}</h2>
+        <h2>score:{{person.score}}</h2>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            isHot:true,
+            person:{
+                age:18,
+                score:98
+            }
+        },
+        computed:{
+            info(){
+               return this.isHot ? '炎热' :'凉爽'
+            }
+        },
+        methods:{
+            changeWeather(){
+                this.isHot =  !this.isHot
+            }
+        },
+      /*  watch:{
+            'person.age':{
+                // 监视多级结构中的某个属性
+                immediate:true,// 初始化的时候调用一下handler
+                handler(newValue,oldValue){
+                    // 当isHost发送改变时候调用一下
+                    console.log('person.age',newValue,oldValue)
+                }
+            }
+        }*/
+
+          watch:{
+            'person':{
+                deep:true,
+                immediate:true,// 初始化的时候调用一下handler
+                handler(newValue,oldValue){
+                    // 当isHost发送改变时候调用一下
+                    console.log('person',newValue,oldValue)
+                }
+            }
+        }
+    });
+
+
+
+
+</script>
+</html>

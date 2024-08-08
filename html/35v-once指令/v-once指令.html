@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-once指令</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+
+<body>
+    <div id="root">
+        <div v-once >初始化n的值 ： {{n}}</div><br/>
+        <div >当前n的值 ： {{n}}</div><br/>
+        <button @click="n++">点我n加1</button>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            n:1,
+        },
+    });
+
+
+
+</script>
+</html>

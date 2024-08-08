@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue数组监测原理</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <li v-for="item in hobby">
+             {{item}}
+        </li>
+    </div>
+</body>
+<script type="text/javascript">
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            student:{
+                name:'张三',
+                age:{
+                    rage:10,
+                    sage:89
+                }
+            },
+            hobby:[
+                'Java',
+                'Vue',
+                'Mysql',
+            ]
+
+        },
+        methods: {
+
+        }
+
+    });
+
+
+
+</script>
+</html>

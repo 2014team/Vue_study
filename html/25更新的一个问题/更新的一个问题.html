@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更新的一个问题</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <h2>列表人员</h2>
+        <button @click="updatePersonArr">更新张三信息</button>
+
+
+        <ul>
+            <li v-for="(item, index) in personArr" :key="item.id">
+               {{index}}-- {{ item.name }} -- {{ item.age }}--{{ item.sex }}
+            </li>
+
+        </ul>
+
+
+    </div>
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+    /*watch实现*/
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            keyWold:'',
+            sortType:0, // 0原顺序1降序2升序
+            personArr: [
+                {id: 1, name: '张三', age: 48,sex:'男'},
+                {id: 2, name: '李四', age: 18,sex:'女'},
+                {id: 3, name: '王五', age: 28,sex:'男'},
+                {id: 4, name: '老刘', age: 8,sex:'女'},
+                {id: 5, name: '刘大大', age: 58,sex:'女'},
+            ],
+
+        },
+        methods: {
+            updatePersonArr(){
+                // 有效果
+                // this.personArr[0].name='张大大';
+                this.personArr.splice(0,1,{id: 1, name: '张大大', age: 48,sex:'男'})
+                // this.personArr[0] = {id: 1, name: '张大大', age: 48,sex:'男'};  // 没有效果
+            }
+        }
+
+    });
+
+
+
+
+</script>
+</html>

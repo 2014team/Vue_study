@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件的几个注意点</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+
+<body>
+    <div id="root">
+        <!--第三步，编写组件标签-->
+        <my-school></my-school>
+    </div>
+
+
+
+
+</body>
+
+<script type="text/javascript">
+ Vue.config.productionTip = false
+
+ // 第一步：创建组件
+   const  school = {
+        name:'xxx',
+       template:`
+               <div>
+                   <h2>学校名称：{{schoolName}}</h2>
+                   <h2>学校地址：{{schoolAddress}}</h2>
+               </div>
+       `,
+       data() {
+           return {
+               schoolName: '深圳大学',
+               schoolAddress: '广东省深圳市'
+           }
+       }
+   }
+
+
+ const vm = new Vue({
+        el: '#root',
+        //第二步：注册组件
+        components:{
+            'my-school':school,
+        }
+
+
+    });
+
+
+</script>
+</html>
