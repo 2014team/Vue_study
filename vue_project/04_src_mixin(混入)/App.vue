@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TestStudent/>
-    <TestSchool/>
+<TestSchool/>
   </div>
 </template>
 <script>

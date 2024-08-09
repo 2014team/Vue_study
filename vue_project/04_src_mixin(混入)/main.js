@@ -6,7 +6,10 @@ import App from './App.vue'
 Vue.config.productionTip = false
 
 
+import {hunhe,hunhe2} from './mixin'
 
+Vue.mixin(hunhe)
+Vue.mixin(hunhe2)
 
 
 //创建Vue实例对象---vm

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>学生名称：{{name}}</h2>
+    <div class="demo">
+        <h2 @click="showName">学生姓名：{{name}}</h2>
         <h2>学生性别：{{sex}}</h2>
     </div>
 
@@ -8,6 +8,8 @@
 
 <script>
 
+    // 引入一个hunhe
+    // import {hunhe,hunhe2} from '../mixin'
 
     export default {
         name:'TestStudent',
@@ -22,7 +24,14 @@
         //         alert(this.name)
         //     }
         // },
+        // mixins:[hunhe,hunhe2]
     }
 
 </script>
 
+<style>
+    .demo{
+        background-color: antiquewhite;
+    }
+
+</style>
