@@ -19,11 +19,9 @@
 </template>
 
 <script>
-
   import MyHeader from "@/components/MyHeader";
   import List from "@/components/List";
   import MyFooter from '@/components/MyFooter';
-
   export default {
     name: "App",
     components:{
@@ -33,11 +31,12 @@
     },
     data() {
       return {
-        todos: [
-          {id: '001', title: '吃饭', done: false},
-          {id: '002', title: "睡觉", done: true},
-          {id: '003', title: '打代码', done: false}
-        ]
+        // todos: [
+        //   {id: '001', title: '吃饭', done: false},
+        //   {id: '002', title: "睡觉", done: true},
+        //   {id: '003', title: '打代码', done: false}
+        // ]
+        todos:JSON.parse(localStorage.getItem('todos')) || []
       }
     },
     methods:{
@@ -59,6 +58,17 @@
       clearAllDoneTodo(){
         this.todos = this.todos.filter(todo => !todo.done)
       }
+    },
+    watch:{
+      //深度监视
+      todos:{
+        deep: true, //深度监视当我监视数组中的对象的某个属性的变化它也会产生反应
+        handler(newValue) {
+          //本地存储存的是key和value都是字符串
+          //数据存放在本地存储中
+          localStorage.setItem("todos", JSON.stringify(newValue))
+        }
+      },
     }
   }
 </script>
