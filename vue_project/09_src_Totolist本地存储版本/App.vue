@@ -2,14 +2,16 @@
   <div id="root">
     <div class="todo-container">
       <div class="todo-wrap">
-        <MyHeader @addTodo="addTodo"/>
+        <MyHeader :addTodo="addTodo"/>
         <List
                 :todos="todos"
+                :checkTodo="checkTodo"
+                :deleteTodo="deleteTodo"
         />
         <MyFooter
                 :todos="todos"
-                @checkAllTodo="checkAllTodo"
-                @clearAllDoneTodo="clearAllDoneTodo"
+                :checkAllTodo="checkAllTodo"
+                :clearAllDoneTodo="clearAllDoneTodo"
         />
       </div>
     </div>
@@ -20,7 +22,6 @@
   import MyHeader from "@/components/MyHeader";
   import List from "@/components/List";
   import MyFooter from '@/components/MyFooter';
-  import pubsub from "pubsub-js";
   export default {
     name: "App",
     components:{
@@ -48,7 +49,7 @@
         const todo = this.todos.find(todo => todo.id === id);
         todo.done = !todo.done;
       },
-      deleteTodo(_, id){
+      deleteTodo(id){
         this.todos = this.todos.filter(todo => todo.id !== id);
       },
       checkAllTodo(done){
@@ -68,16 +69,6 @@
           localStorage.setItem("todos", JSON.stringify(newValue))
         }
       },
-    },
-    //已挂在绑定事件总线
-    mounted() {
-      this.$bus.$on('checkTodo', this.checkTodo);
-      this.pubId = pubsub.subscribe('deleteTodo', this.deleteTodo);
-    },
-    //被卸载注意解绑
-    beforeMount() {
-      this.$bus.$off('checkTodo');
-      pubsub.unsubscribe(this.pubId); //取消订阅的方式与取消定时器的方式是类似的，记住
     }
   }
 </script>

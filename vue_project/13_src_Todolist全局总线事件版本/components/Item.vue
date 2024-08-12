@@ -13,7 +13,6 @@
 </template>
 
 <script>
-    import pubsub from "pubsub-js";
     export default {
         name: "Item",
         //声明接收todo
@@ -27,9 +26,7 @@
                 if(confirm(`确定删除编号为${id}的todo吗`)){
                     // console.log(id);
                     //事件总线
-                    // this.$bus.$emit('deleteTodo',id);
-                    //消息订阅改写
-                    pubsub.publish('deleteTodo', id);
+                    this.$bus.$emit('deleteTodo',id);
                 }
             }
         }

@@ -29,12 +29,11 @@
                     done:false
                 }
                 // console.log(todoObj);
-                // this.addTodo(todoObj);
-                //采用自定义事件来修改
-                this.$emit('addTodo',todoObj);
+                this.addTodo(todoObj)
                 this.title = '';
             }
         },
+        props:['addTodo'],
     }
 </script>
 

@@ -15,7 +15,7 @@
 <script>
     export default {
         name: "MyFooter",
-        props: ['todos'],
+        props: ['todos', 'checkAllTodo', 'clearAllDoneTodo'],
         computed:{
             total(){
                 return this.todos.length;
@@ -33,9 +33,7 @@
                 },
                 set(value){
                     //value注意要么为true，要么为false，因为你是把它应用在了checkbox上
-                    //this.checkAllTodo(value);
-                    //采用自定义事件来修改
-                    this.$emit('checkAllTodo', value);
+                    this.checkAllTodo(value);
                 }
             }
         },
@@ -45,9 +43,7 @@
             //   this.checkAllTodo(e.target.checked);
             // }
             clearAll(){
-                // this.clearAllDoneTodo();
-                //修改为自定义事件
-                this.$emit('clearAllDoneTodo');
+                this.clearAllDoneTodo();
             }
         }
     }
