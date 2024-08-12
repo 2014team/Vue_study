@@ -5,6 +5,11 @@ import App from './App.vue'
 //关闭vue的生产提示
 Vue.config.productionTip = false
 
+//引入插件
+import plugins from './plugins';
+
+Vue.use(plugins); //vue应用插件
+
 
 //创建Vue实例对象---vm
 new Vue({
