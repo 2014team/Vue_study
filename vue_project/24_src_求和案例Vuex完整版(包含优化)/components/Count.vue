@@ -4,7 +4,6 @@
         <!--让其收集到的数据全是number类型的 number修饰符-->
         <h3>当前求和放大3倍为:{{ bigSum }}</h3>
         <h3>我在{{ school }}, 学习{{ subject }}</h3>
-        <h3 style="color: red">下方列表的总人数 {{ personList.length }}</h3>
         <select v-model.number="n">
             <!--让所有的value全部绑定为数字-->
             <option value="1">1</option>
@@ -36,7 +35,7 @@
             //   subject: 'subject'
             // }),
             //借助mapState从state中生成计算属性,数组写法(即代表了生成的计算属性名为sum，同时也代表了从state找到sum)
-            ... mapState(['sum', 'school', 'subject', 'personList']),
+            ... mapState(['sum', 'school', 'subject']),
 
             //借助mapGetters从getters中生成计算属性,对象写法
             // ...mapGetters({ bigSum: 'bigSum' }),
