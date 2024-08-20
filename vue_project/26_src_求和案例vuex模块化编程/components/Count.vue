@@ -36,12 +36,13 @@
             //   subject: 'subject'
             // }),
             //借助mapState从state中生成计算属性,数组写法(即代表了生成的计算属性名为sum，同时也代表了从state找到sum)
-            ... mapState(['sum', 'school', 'subject', 'personList']),
+            ... mapState('count', ['sum', 'subject', 'school']),
+            ...mapState('person', ['personList']),
 
             //借助mapGetters从getters中生成计算属性,对象写法
             // ...mapGetters({ bigSum: 'bigSum' }),
             //借助mapGetters从getters中生成计算属性,数组写法
-            ...mapGetters(['bigSum']),
+            ...mapGetters('count',['bigSum']),
 
         },
         methods:{
@@ -52,7 +53,7 @@
             //   this.$store.commit('DECREMENT', this.n);
             // },
             //借助mapMutations生成对应方法，方法会调用commit去联系mutations，对象写法
-            ...mapMutations({
+            ...mapMutations('count',{
                 increment: 'INCREMENT',
                 decrement: 'DECREMENT',
             }),
@@ -72,7 +73,7 @@
             //   incrementWait: 'incrementWait',
             // }),
 
-            ...mapActions(['incrementWait', 'incrementIfOdd']), //数组写法,同上
+            ...mapActions('count',['incrementWait', 'incrementIfOdd']), //数组写法,同上
         },
     }
 </script>
