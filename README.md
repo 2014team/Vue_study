@@ -58,17 +58,17 @@ let doubled = numbers.map(n => n * 2);
 
 官网地址： https://cn.vuejs.org/
 
-![image-20240725134202917](upload\image-20240725134202917.png)
+![image-20240725134202917](https://2014team.github.io/note/Vue/upload/image-20240725134202917.png)
 
 
 
 开发工具
 
-![image-20240725142146064](upload\image-20240725142146064.png)
+![image-20240725142146064](https://2014team.github.io/note/Vue/upload/image-20240725142146064.png)
 
 
 
-![image-20240725142207322](upload\image-20240725142207322.png)
+![image-20240725142207322](https://2014team.github.io/note/Vue/upload/image-20240725142207322.png)
 
 **解决**Download the Vue Devtools extension for a better development experience:
 https://github.com/vuejs/vue-devtools
@@ -79,21 +79,21 @@ https://github.com/vuejs/vue-devtools
 
 https://v2.cn.vuejs.org/v2/guide/installation.html
 
-![image-20240725142507139](upload\image-20240725142507139.png)
+![image-20240725142507139](https://2014team.github.io/note/Vue/upload/image-20240725142507139.png)
 
 
 
-![image-20240725142524455](upload\image-20240725142524455.png)
+![image-20240725142524455](https://2014team.github.io/note/Vue/upload/image-20240725142524455.png)
 
 
 
-![image-20240725142629945](upload\image-20240725142629945.png)
+![image-20240725142629945](https://2014team.github.io/note/Vue/upload/image-20240725142629945.png)
 
-![image-20240725142703964](upload\image-20240725142703964.png)
+![image-20240725142703964](https://2014team.github.io/note/Vue/upload/image-20240725142703964.png)
 
-![image-20240725142739179](upload\image-20240725142739179.png)
+![image-20240725142739179](https://2014team.github.io/note/Vue/upload/image-20240725142739179.png)
 
-![image-20240725142805191](upload\image-20240725142805191.png)
+![image-20240725142805191](https://2014team.github.io/note/Vue/upload/image-20240725142805191.png)
 
 
 
@@ -101,7 +101,7 @@ https://v2.cn.vuejs.org/v2/guide/installation.html
 Make sure to turn on production mode when deploying for production.
 See more tips at https://vuejs.org/guide/deployment.html
 
-![image-20240725143450858](upload\image-20240725143450858.png)
+![image-20240725143450858](https://2014team.github.io/note/Vue/upload/image-20240725143450858.png)
 
 ```
 <!DOCTYPE html>
@@ -318,7 +318,7 @@ V：视图（View）模板
 
 VM：视图模型（ViewModel）Vue实例对象
 
-![img](upload\webp)
+![img](https://2014team.github.io/note/Vue/upload/webp)
 
 
 data中所有的属性，最后都出现在了vm身上。
@@ -366,7 +366,7 @@ vm身上所有的属性 及 Vue原型上所有属性，在Vue模板中都可以�
 </html>
 ```
 
-![image-20240729142303310](upload\image-20240729142303310.png)
+![image-20240729142303310](https://2014team.github.io/note/Vue/upload/image-20240729142303310.png)
 
 ### 数据代理理解
 
@@ -401,7 +401,7 @@ vm身上所有的属性 及 Vue原型上所有属性，在Vue模板中都可以�
 </html>
 ```
 
-![image-20240729144158790](upload\image-20240729144158790.png)
+![image-20240729144158790](https://2014team.github.io/note/Vue/upload/image-20240729144158790.png)
 
 ### Vue中的数据代理
 
@@ -437,7 +437,7 @@ vm身上所有的属性 及 Vue原型上所有属性，在Vue模板中都可以�
 </html>
 ```
 
-![image-20240729145740278](upload\image-20240729145740278.png)
+![image-20240729145740278](https://2014team.github.io/note/Vue/upload/image-20240729145740278.png)
 
 
 
@@ -1584,9 +1584,9 @@ key是虚拟DOM对象的标识，当数据发生变化时，Vue会根据【新�
 
 问题：向数组添加一行， ：key是index存在问题。：key应该是唯一属性
 
-![](upload\image-20240802103158652.png)
+![](https://2014team.github.io/note/Vue/upload/image-20240802103158652.png)
 
-![](upload\image-20240802103224504.png)
+![](https://2014team.github.io/note/Vue/upload/image-20240802103224504.png)
 
 ### 列表过滤
 
@@ -1716,7 +1716,7 @@ key是虚拟DOM对象的标识，当数据发生变化时，Vue会根据【新�
 
 ### 列表排序
 
-![image-20240802150054481](upload\image-20240802150054481.png)
+![image-20240802150054481](https://2014team.github.io/note/Vue/upload/image-20240802150054481.png)
 
 ```html
 <!DOCTYPE html>
@@ -1921,7 +1921,7 @@ key是虚拟DOM对象的标识，当数据发生变化时，Vue会根据【新�
 
 ### Vue.set方法
 
-![image-20240802165631426](upload\image-20240802165631426.png)
+![image-20240802165631426](https://2014team.github.io/note/Vue/upload/image-20240802165631426.png)
 
 ```html
 <!DOCTYPE html>
@@ -1972,7 +1972,7 @@ key是虚拟DOM对象的标识，当数据发生变化时，Vue会根据【新�
 
 [数组更新检测说明](https://v2.cn.vuejs.org/v2/guide/list.html#数组更新检测)
 
-![image-20240802171812990](upload\image-20240802171812990.png)
+![image-20240802171812990](https://2014team.github.io/note/Vue/upload/image-20240802171812990.png)
 
 ```html
 <!DOCTYPE html>
@@ -2138,7 +2138,7 @@ vue会监视data中所有层次的数据。
 </html>
 ```
 
-![image-20240805101719636](upload\image-20240805101719636.png)
+![image-20240805101719636](https://2014team.github.io/note/Vue/upload/image-20240805101719636.png)
 
 ### 收集表单数据
 
@@ -2219,7 +2219,7 @@ vue会监视data中所有层次的数据。
 
 
 
-![image-20240805105611019](upload\image-20240805105611019.png)
+![image-20240805105611019](https://2014team.github.io/note/Vue/upload/image-20240805105611019.png)
 
 
 
@@ -2335,7 +2335,7 @@ vue会监视data中所有层次的数据。
 
 
 
-![image-20240806113343236](upload\image-20240806113343236.png)
+![image-20240806113343236](https://2014team.github.io/note/Vue/upload/image-20240806113343236.png)
 
 ### v-text指令
 
@@ -2385,7 +2385,7 @@ v-text指令:
 </html>
 ```
 
-![image-20240806114449738](upload\image-20240806114449738.png)
+![image-20240806114449738](https://2014team.github.io/note/Vue/upload/image-20240806114449738.png)
 
 ### v-html指令
 
@@ -2433,7 +2433,7 @@ v-text指令:
 </html>
 ```
 
-![image-20240806142822640](upload\image-20240806142822640.png)
+![image-20240806142822640](https://2014team.github.io/note/Vue/upload/image-20240806142822640.png)
 
 ### v-cloak指令
 
@@ -2561,7 +2561,7 @@ v-pre指令:
 
 ### 自定义函数式
 
-![image-20240806153055115](upload\image-20240806153055115.png)
+![image-20240806153055115](https://2014team.github.io/note/Vue/upload/image-20240806153055115.png)
 
 ```html
 <!DOCTYPE html>
@@ -2610,7 +2610,7 @@ v-pre指令:
 
 ### 自定义对象式
 
-![image-20240806154323006](upload\image-20240806154323006.png)
+![image-20240806154323006](https://2014team.github.io/note/Vue/upload/image-20240806154323006.png)
 
 
 
@@ -2762,7 +2762,7 @@ v-pre指令:
 
 
 
-![image-20240807101948030](upload\image-20240807101948030.png)
+![image-20240807101948030](https://2014team.github.io/note/Vue/upload/image-20240807101948030.png)
 
 ```html
 <!DOCTYPE html>
@@ -2864,7 +2864,7 @@ v-pre指令:
 </html>
 ```
 
-![image-20240807135412029](upload\image-20240807135412029.png)
+![image-20240807135412029](https://2014team.github.io/note/Vue/upload/image-20240807135412029.png)
 
 
 
@@ -2904,9 +2904,9 @@ vm的一生(vm的生命周期):
 
 
 
-![image-20240807140356969](upload\image-20240807140356969.png)
+![image-20240807140356969](https://2014team.github.io/note/Vue/upload/image-20240807140356969.png)
 
-![image-20240807140504436](upload\image-20240807140504436.png)
+![image-20240807140504436](https://2014team.github.io/note/Vue/upload/image-20240807140504436.png)
 
 ### 非单文件组件
 
@@ -3021,7 +3021,7 @@ vm的一生(vm的生命周期):
 </html>
 ```
 
-![image-20240807143800398](upload\image-20240807143800398.png)
+![image-20240807143800398](https://2014team.github.io/note/Vue/upload/image-20240807143800398.png)
 
 **Vue中使用组件的三大步骤:**
 
@@ -3119,7 +3119,7 @@ vm的一生(vm的生命周期):
 </html>
 ```
 
-![image-20240807151738933](upload\image-20240807151738933.png)
+![image-20240807151738933](https://2014team.github.io/note/Vue/upload/image-20240807151738933.png)
 
 
 
@@ -3231,7 +3231,7 @@ vm的一生(vm的生命周期):
 </html>
 ```
 
-![image-20240807154743179](upload\image-20240807154743179.png)
+![image-20240807154743179](https://2014team.github.io/note/Vue/upload/image-20240807154743179.png)
 
 ### VueComponet构造函数
 
@@ -3321,13 +3321,13 @@ Vue的实例对象，以后简称vm.
 </html>
 ```
 
-![image-20240807162046004](upload\image-20240807162046004.png)
+![image-20240807162046004](https://2014team.github.io/note/Vue/upload/image-20240807162046004.png)
 
-![image-20240807162108741](upload\image-20240807162108741.png)
+![image-20240807162108741](https://2014team.github.io/note/Vue/upload/image-20240807162108741.png)
 
 ### 一个重要内置关系
 
-![image-20240807165857615](upload\image-20240807165857615.png)
+![image-20240807165857615](https://2014team.github.io/note/Vue/upload/image-20240807165857615.png)
 
 ```html
 <!DOCTYPE html>
@@ -3389,7 +3389,7 @@ Vue的实例对象，以后简称vm.
 </html>
 ```
 
-![image-20240807170032470](upload\image-20240807170032470.png)
+![image-20240807170032470](https://2014team.github.io/note/Vue/upload/image-20240807170032470.png)
 
 1.一个重业的内置关系:Vuecomponent.prototype.proto=== Vue.prototype
 2.为什么要有这个关系:让组件实例对象(ve)可以访问到Vue原型上的属性、方法。
@@ -4288,7 +4288,7 @@ module.exports = {
 
 ### Vuex
 
-![image-20240820141858750](upload\image-20240820141858750.png)
+![image-20240820141858750](https://2014team.github.io/note/Vue/upload/image-20240820141858750.png)
 
 安装vuex插件
 
@@ -5092,9 +5092,9 @@ vite官网：[https://vitejs.cn](https://vitejs.cn/)
   - 轻量快速的热重载（HMR）。
   - 真正的按需编译，不再等待整个应用编译完成。
 
-![image-20240827160047576](upload\image-20240827160047576.png)
+![image-20240827160047576](https://2014team.github.io/note/Vue/upload/image-20240827160047576.png)
 
-![image-20240827160100541](upload\image-20240827160100541.png)
+![image-20240827160100541](https://2014team.github.io/note/Vue/upload/image-20240827160100541.png)
 
 ```
 ## 创建工程
@@ -5341,11 +5341,11 @@ npm run dev
 
 **vue2.x的生命周期**
 
-![image-20240829144747558](upload\image-20240829144747558.png)
+![image-20240829144747558](https://2014team.github.io/note/Vue/upload/image-20240829144747558.png)
 
 **vue3.0的生命周期**
 
-![image-20240829144841779](upload\image-20240829144841779.png)
+![image-20240829144841779](https://2014team.github.io/note/Vue/upload/image-20240829144841779.png)
 
 - Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有有两个被更名：
   - `beforeDestroy`改名为 `beforeUnmount`
@@ -5457,7 +5457,7 @@ npm run dev
 
 ##### 5.provide 与 inject
 
-![image-20240829160447174](upload\image-20240829160447174.png)
+![image-20240829160447174](https://2014team.github.io/note/Vue/upload/image-20240829160447174.png)
 
 - 作用：实现**祖与后代组件间**通信
 
@@ -5504,9 +5504,9 @@ npm run dev
 
 使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改 。
 
-![](upload\68747470733a2f2f70332d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f66383465346532633032343234643961393938363261646530613265343131347e74706c762d6b3375316662706663702d77617465726d6172.gif)
+![](https://2014team.github.io/note/Vue/upload/68747470733a2f2f70332d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f66383465346532633032343234643961393938363261646530613265343131347e74706c762d6b3375316662706663702d77617465726d6172.gif)
 
-![](upload\12.gif)
+![](https://2014team.github.io/note/Vue/upload/12.gif)
 
 #### 2.Composition API 的优势
 
@@ -5514,9 +5514,9 @@ npm run dev
 
 我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
 
-![](upload\11.gif)
+![](https://2014team.github.io/note/Vue/upload/11.gif)
 
-![888](upload\888.gif)
+![888](https://2014team.github.io/note/Vue/upload/888.gif)
 
 ### 新的组件
 
